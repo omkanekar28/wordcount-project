@@ -209,19 +209,13 @@
 
     <main>
         <div class="container">
-            <h1 class="text-center">Blog</h1>
-            <br><br>
-            <h2>Latest Blogs</h2>
+            <h1 class="text-center">{{blog.title}}</h1>
             <hr>
-            {% for blog in blogs %}
-                <a href="{% url 'detail' blog.id %}"><h4>{{blog.title}}</h4></a>
-                <p>{{blog.pub_date}}</p>
-                <image src="{{blog.image.url}}" height=200 width=200>
-                <p>{{blog.summary}}</p>
-                <br>
-            {% empty %}
-                <h4>No blogs to show</h4>
-            {% endfor %}
+            <a href="{% url 'detail' blog.id %}"><h4></h4></a>
+            <p>{{blog.pub_date}}</p>
+            <image src="{{blog.image.url}}" length=1200 width=1200>
+            <br>
+            <p>{{blog.body}}</p>
         </div>
             
     </main>
